@@ -114,3 +114,40 @@ Sur mon compte, sur les 1586 pistes, 6 n'avaient pas de isrc. Je n'ai pas creus�
 ## Import sur youtube
 
 Maintenant que vous avez un export avec vos pistes, on va pouvoir les importer sur votre compte youtube.
+
+En tant que développeur, j'ai toujours haïs ce qui vient de Google.
+Google cloud est infâme. Leurs apis sont infâmes. Leurs SDks sont infâmes.  
+Et forcément, leurs produits le sont aussi en général.  
+Je ne pense pas que les succès d'Android ou de Chromecast soient dues à leur qualités intrasèques.  
+Seuls les chromebook s'en sortent plutôt pas mal.
+
+En général ils ont plein d'apis périmées qu changent de nom tous les 4 matins.
+Youtube Music ne fait pas exception. C'était google Play Music et c'est devenu Youtube Music.  
+et ça mélange les données et fonctions de Youtube Viéo et de Youtube Music qui n'ont en fait de commun que le nom.
+
+Bref, tout ça pour dire qu'on va devoir utiliser une de leurs apis et ça n'est jamais une partie de plaisir.
+
+Ce qu'on doit faire : créer un projet, configurer l'athentification, activer les apis.  
+Après seulement on pourra coder.
+
+### Création d'un projet
+
+Tout commence la [console cloud](https://console.cloud.google.com/).  
+Une fois connecté vous pouvez, dans le header, aller sur la liste des projet et en créer un nouveau.  
+Si vous l'appelez `musicimport` comme moi, vous pourrez utiliser les liens que je mettrais plus bas.  
+Puis revenez sur la console et vérifiez que c'est bien le nouveau projet qui est actif. (toujours dans le header).  
+Le projet met 20 ou 30 secondes à se créer donc on ne peut pas le sélectionner tout de suite.
+
+Aller ensuite dans la section `api et services` puis `bibliothèque`. ([Lien direct](https://console.cloud.google.com/apis/library?project=musicimport)]
+Recherchez `YouTube Data API v3` (Au 23/12/2023. Dans quelques jours ce sera peut-être la v12).  
+Cliquez dessus et activez la avec le bouton `Activer`.
+
+On va devoir aller ensuite dans 2 onglets : `Ecran d'authorisation OAuth` puis `Identifiants`.  
+Le premier est obligatoire avant de pouvoir créer des identifiants dans le second.
+
+#### Ecran d'authorisation
+
+Dans la secion
+
+Pour créer des identifiants, allez dans la section `Identifiants` et utilisez le bouton `Créer des identifiants` en haut.  
+Choisissez ``
